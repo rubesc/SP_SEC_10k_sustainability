@@ -28,7 +28,11 @@ body {
     /* Apply styles directly to the images inside .url_img */
     max-width: 50px;
     max-height: 50px;
-    border:1px solid #7d7a7a'
+    border:1px solid #7d7a7a ;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Adjust the duration and easing function */
+  
+    
     /* Add any other styles as needed */
   }
   
