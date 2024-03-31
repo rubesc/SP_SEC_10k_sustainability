@@ -1,33 +1,38 @@
-/* Basic styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
-header h1 {
-    margin: 0;
-}
-
-main {
-    padding: 20px;
-}
-
-section {
-    margin-bottom: 40px;
-}
-
-h2 {
-    margin-bottom: 10px;
-}
-
-p {
-    line-height: 1.5;
-}
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 16px;
+    padding: 1em;
+  }
+  
+  h1 {
+    font-size: 3em;
+    margin: 0.25em 0;
+  }
+  
+  
+  h2 {
+    font-size: 32px;
+    color: rgb(211, 140, 152);
+  }
+  
+  h3 {
+    font-size: 2em;
+    margin: 0.25em 0;
+  }
+  
+  p {
+    font-size: 1em;
+  }
+  
+  .url_img img {
+    /* Apply styles directly to the images inside .url_img */
+    max-width: 50px;
+    max-height: 50px;
+    /* Add any other styles as needed */
+  }
+  
+  hr {
+    border: none;
+    height: 2px; /* Adjust the thickness of the line as needed */
+    background-color: pink;
+  }
