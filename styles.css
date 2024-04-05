@@ -31,14 +31,12 @@ body {
     margin: 2em 0; /* Add space above and below the line */
 }
 
-  .url_img img {
-    /* Apply styles directly to the images inside .url_img */
-    max-width: 50px;
-    max-height: 50px;
-    border:1px solid #7d7a7a ;
-    opacity: 0;
-    transition: opacity 1s ease-in-out; /* Adjust the duration and easing function */
-  
+  img {
+    /* max-width: 50px;
+    max-height: 50px; */
+    border:0.4px solid #7d7a7a ;
+    padding: 2em;
+    
     
     /* Add any other styles as needed */
   }
