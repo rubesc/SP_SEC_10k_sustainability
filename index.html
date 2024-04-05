@@ -37,8 +37,8 @@
         <p> 
             1. Gather list of S&P 50 company from this wikipedia page. Note that top 50 is based on market cap as of 2024 March.
             2. Gather each company's latest SEC 10-K filing via U.S. Securities and Exchange Commission's EDGAR database. (2022-2023 filings)
-            3. Leverage SEC 10-K Section Extractor API (SEC.gov EDGAR Filings Query & Real-Time Stream API) to extract raw text in standardized HTML for the following 10-K sections: 1- Business, 1A - Risk Factors. 
-            4. 
+            3. Leverage SEC 10-K Section Extractor API (EDGAR Filings Query) to extract raw text in standardized HTML for the following 10-K sections: 1- Business, 1A - Risk Factors. 
+            4. Expand "climate change" keywords by referencing a list of Top 100 bi-gram from the "Firm-Level Climate Change Exposure" resarch by Sautner, Van Lent, and Grigor (2023).  
 
 
         </p>
@@ -99,6 +99,15 @@
 
          <p> Coming soon
          </p>
+
+
+         <!-- List of climate change keywords  -->
+        <h2> List of climate change keywords  </h2>
+        To expand "climate change" keywords, I am referencing the Top 100 bi-gram from the "Firm-Level Climate Change Exposure" resarch by Sautner, Van Lent, and Grigor (2023) as they covers many angles of climate change.  
+        See list of keyword here: 
+        <img src="./media/Chart/top_100_bigram_list.png" width="800" >  
+
+
 
         <!-- Top 100 bigram -->
         <h2> How often are these top 100 bigrams mentioned in the 10-K business and the risk section, respectively?  </h2>
