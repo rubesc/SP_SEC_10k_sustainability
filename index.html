@@ -34,14 +34,25 @@
         <!-- methodology -->
         <h2> Methodology </h2>
 
-        <p> 
-            1. Gather list of S&P 50 company from this wikipedia page. Note that top 50 is based on market cap as of 2024 March.
-            2. Gather each company's latest SEC 10-K filing via U.S. Securities and Exchange Commission's EDGAR database. (2022-2023 filings)
-            3. Leverage SEC 10-K Section Extractor API (EDGAR Filings Query) to extract raw text in standardized HTML for the following 10-K sections: 1- Business, 1A - Risk Factors. 
-            4. Expand "climate change" keywords by referencing a list of Top 100 bi-gram from the "Firm-Level Climate Change Exposure" resarch by Sautner, Van Lent, and Grigor (2023).  
-
-
-        </p>
+        <ol>
+            <li>
+              Gather a list of S&P 50 companies from <a href="https://en.wikipedia.org/wiki/List_of_S%26P_500_companies">this Wikipedia page</a>. Note that the top 50 is based on market capitalization as of March 2024.
+            </li>
+            <li>
+              Gather each company's latest SEC 10-K filing via the U.S. Securities and Exchange Commission's EDGAR database. Focus on filings from 2022 to 2023.
+            </li>
+            <li>
+              Leverage the SEC 10-K Section Extractor API (EDGAR Filings Query) to extract raw text in standardized HTML for the following 10-K sections: 
+              <ul>
+                <li>Section 1 - Business</li>
+                <li>Section 1A - Risk Factors</li>
+              </ul>
+            </li>
+            <li>
+              Expand "climate change" keywords by referencing a list of the Top 100 bi-grams from the research paper "Firm-Level Climate Change Exposure" by Sautner, Van Lent, and Grigor (2023).
+            </li>
+          </ol>
+          
         
         <div id="container3"></div>
         <hr>
@@ -173,9 +184,64 @@
             <!-- Glossary -->
             <h2> Glossary </h2>
 
-            <p> Coming soon
-            </p>
-                                    
+            <table>
+              <tr>
+                <th>Term</th>
+                <th>Definition</th>
+              </tr>
+              <tr>
+                <td>10-K Filing</td>
+                <td>An annual report filed by publicly traded companies to the Securities and Exchange Commission (SEC). It provides a comprehensive overview of the company's financial performance, risks, and management discussion and analysis.</td>
+              </tr>
+              <tr>
+                <td>10-K filing section 1 - Business</td>
+                <td>Section 1 of a company's 10-K filing, which provides information about the company's business operations, including its products and services, market segments, and competitive landscape.</td>
+              </tr>
+              <tr>
+                <td>10-K filing section 1A - Risk</td>
+                <td>Section 1A of a company's 10-K filing, which outlines the key risks and uncertainties facing the company, including financial, market, regulatory, and operational risks.</td>
+              </tr>
+              <tr>
+                <td>Bi-gram</td>
+                <td>In text analysis, a bi-gram refers to a sequence of two adjacent words or tokens occurring in a document or a corpus. Bi-grams are commonly used in natural language processing tasks such as language modeling and sentiment analysis.</td>
+              </tr>
+              <tr>
+                <td>EDGAR</td>
+                <td>The Electronic Data Gathering, Analysis, and Retrieval system (EDGAR) is an online database maintained by the U.S. Securities and Exchange Commission (SEC) that provides free public access to corporate filings, including 10-K reports, 10-Q reports, and other disclosure documents.</td>
+              </tr>
+              <tr>
+                <td>ESG</td>
+                <td>Environmental, Social, and Governance (ESG) criteria are a set of non-financial factors used to evaluate a company's sustainability and ethical impact. ESG factors include environmental practices, social responsibility, and corporate governance.</td>
+              </tr>
+              <tr>
+                <td>Greenwashing</td>
+                <td>Greenwashing refers to the practice of misleading consumers or investors by falsely claiming to be environmentally friendly or sustainable, often through deceptive marketing or public relations efforts.</td>
+              </tr>
+              <tr>
+                <td>Greenwashing indicator framework</td>
+                <td>A framework used to assess and measure the extent of greenwashing in corporate communication or marketing materials. It typically involves evaluating specific criteria or indicators to identify instances of misleading or exaggerated environmental claims.</td>
+              </tr>
+              <tr>
+                <td>Market Cap</td>
+                <td>Market capitalization, often referred to as market cap, is the total value of a publicly traded company's outstanding shares of stock. It is calculated by multiplying the current share price by the total number of outstanding shares.</td>
+              </tr>
+              <tr>
+                <td>S&P</td>
+                <td>Standard & Poor's (S&P) is a financial services company that provides credit ratings, market intelligence, and investment research. It is best known for its stock market indices, including the S&P 500, which tracks the performance of 500 large-cap U.S. companies.</td>
+              </tr>
+              <tr>
+                <td>S&P 500</td>
+                <td>The S&P 500 is a stock market index that measures the performance of 500 large-cap U.S. companies listed on stock exchanges. It is widely regarded as one of the best indicators of the overall health of the U.S. stock market.</td>
+              </tr>
+              <tr>
+                <td>SEC</td>
+                <td>The U.S. Securities and Exchange Commission (SEC) is a federal agency responsible for enforcing federal securities laws, regulating the securities industry, and overseeing the stock and options exchanges in the United States.</td>
+              </tr>
+              <tr>
+                <td>Text analysis</td>
+                <td>Text analysis, also known as text mining or text analytics, is the process of extracting meaningful insights and information from unstructured text data. It involves techniques such as natural language processing, machine learning, and statistical analysis to analyze and interpret large volumes of text.</td>
+              </tr>
+            </table>              
          
 
 
