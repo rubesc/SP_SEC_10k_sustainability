@@ -1,6 +1,6 @@
 body {
     font-family: "Source Sans Pro", sans-serif;
-    font-size: 16px;
+    font-size: 12px;
     padding: 1em;
   }
   
@@ -24,6 +24,13 @@ body {
     font-size: 1em;
   }
   
+  hr {
+    height: 2px; /* Adjust the height of the line */
+    border: none; /* Remove the default border */
+    border-top: 0.1px solid #ccc; /* Set the color and style of the top border */
+    margin: 2em 0; /* Add space above and below the line */
+}
+
   .url_img img {
     /* Apply styles directly to the images inside .url_img */
     max-width: 50px;
@@ -36,23 +43,46 @@ body {
     /* Add any other styles as needed */
   }
   
-  hr {
-    border: none;
-    height: 2px; /* Adjust the thickness of the line as needed */
-    background-color: #7d7a7a;
-  }
+  ol {
+    list-style: decimal;    
+    margin: 0;
+    padding: 2em;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 
   table {
-        width: 100%;
-        border-collapse: collapse;
-    }
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #918b8b;
+    
+}
+.term.header {
+    font-size: 8px;
+    border: 1px solid black;
+    background-color: #aea8a8;
+}
 
-  th, td {
-        border: 1px solid black;
-        padding: 8px;
-        text-align: left;
-    }
-
-  th {
-        background-color: #f2f2f2;
-    }
+.term {
+    font-size: 8px;
+    border: 1px solid black;
+}
