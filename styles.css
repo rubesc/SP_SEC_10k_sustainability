@@ -45,6 +45,11 @@ body {
     
     /* Add any other styles as needed */
   }
+
+
+  .noborder img {
+    border: none;
+  }
   
   ol {
     list-style: decimal;    
