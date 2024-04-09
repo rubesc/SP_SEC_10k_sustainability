@@ -24,6 +24,21 @@ body {
     font-weight: 400;
     color: rgb(95, 185, 119);
   }
+
+  h4 {
+    font-size: 14px;
+    color: rgb(39, 97, 54);
+
+
+  }
+
+  h5 {
+    font-size: 12px;
+    color: rgb(80, 143, 97);
+    font-weight: 400;
+    
+  }
+
   
   p {
     font-size: 1em;
