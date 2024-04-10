@@ -6,7 +6,18 @@ As concerns regarding corporate sustainability and environmental responsibility 
 
 ## Abstract
 
-This capstone project focuses on analyzing SEC Filings Form 10-K of S&P companies to investigate how sustainability shows up in their financial reportings. The study aims to distinguish these authentic representations from potential greenwashing narratives and lies often found in optional CRS reports and marketing materials. Informed by existing studies on greenwashing indicators, the research establishes a framework applied to assess environmental claims and narratives of leading public companies. The study aims to provide valuable insights for researchers, practitioners, and policymakers interested in enhancing the effectiveness of greenwashing detection methodologies.
+This capstone project investigates how climate sentiment is portrayed in corporate financial reporting,
+focusing on SEC 10-K filings from leading S&P 50 companies. These filings offer detailed insights into
+financial performance, risks, and management discussions, providing a rich dataset for analyzing
+corporate behaviors with sustainability and environmental concerns. Through meticulous examination of
+these legally binding financial disclosures, this study sheds light on the extent to which companies
+address environmental issues and the implications for environmental stewardship. Drawing inspiration
+from established greenwashing indicator frameworks, the study develops a climate sentiment framework
+tailored to the context of SEC 10-K filings. By contributing to the broader discourse on environmental
+challenges, stewardship, and corporate transparency, this research offers valuable insights for
+academia, industry stakeholders, and policymakers grappling with environmental issues in the corporate
+sector. It provides a nuanced understanding of corporate practices and highlights avenues for improving
+environmental reporting and accountability.
 
 
 ## Data Privacy & Protection
