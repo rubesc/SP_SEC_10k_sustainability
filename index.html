@@ -1,356 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Climate Sentiment in SEC 10-K Filings of S&P 50 Companies</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <header>
-        <h1> Climate Sentiment in SEC 10-K Filings of S&P 50 Companie </h1>
-        <h7> By RC (April 2024)</h7>
-    </header>
-    <main>
-      <hr>
-         <!-- Overview -->
 
-      <h2> Overview </h2>
+    <div class="container">
 
-      <p> As concerns regarding corporate sustainability and environmental responsibility grow, the phenomenon of greenwashing becomes a critical area of scrutiny. While many Greenwashing Indicator (GWI) frameworks have been developed to measure and identify greenwashing practices, they are often focusing on sustainability reports. The intersection of greenwashing indicators with financial communications (e.g. SEC Filings Form 10-K) remains an underexplored area. The objective of this research is to investigate how sustainability is reflected in their financial reporting and to uncover any discrepancies or inconsistencies that may indicate the presence of greenwashing strategies within corporate communications.  
-      </p>
-      
-      <!-- <div id="container3"></div> -->
-      <hr>
+        <header>
+            <h1> Climate Sentiment in SEC 10-K Filings of S&P 50 Companie </h1>
+            <h7> By RC (April 2024)</h7>
+        </header>
 
-        <!-- Abstract -->
-        <h2> Abstract </h2>
+        <main>
+            <hr>
+            <!-- Overview -->
 
-        <p> This capstone project focuses on analyzing SEC Filings Form 10-K of S&P companies to investigate how sustainability shows up in their financial reportings. The study aims to distinguish these authentic representations from potential greenwashing narratives and lies often found in optional CRS reports and marketing materials. Informed by existing studies on greenwashing indicators, the research establishes a framework applied to assess environmental claims and narratives of leading public companies. The study aims to provide valuable insights for researchers, practitioners, and policymakers interested in enhancing the effectiveness of greenwashing detection methodologies.
-        </p>
-        
-        <!-- <div id="container3"></div> -->
-        <hr>
+            <h2> Overview </h2>
 
-        <!-- Glossary -->
-        <h2> Glossary </h2>
-
-        <table class="term"> 
-            <tr>
-            <td class="term header">Term</td>
-            <td class="term header"> Definition</td>
-            </tr>
-            <tr>
-            <td>10-K Filing</td>
-            <td>An annual report filed by publicly traded companies to the Securities and Exchange Commission (SEC). It provides a comprehensive overview of the company's financial performance, risks, and management discussion and analysis.</td>
-            </tr>
-            <tr>
-            <td>1 - Business</td>
-            <td>Section 1 of a company's 10-K filing, which provides information about the company's business operations, including its products and services, market segments, and competitive landscape.</td>
-            </tr>
-            <tr>
-            <td> 1A - Risk</td>
-            <td>Section 1A of a company's 10-K filing, which outlines the key risks and uncertainties facing the company, including financial, market, regulatory, and operational risks.</td>
-            </tr>
-            <tr>
-            <td>Bi-gram</td>
-            <td>In text analysis, a bi-gram refers to a sequence of two adjacent words or tokens occurring in a document or a corpus. Bi-grams are commonly used in natural language processing tasks such as language modeling and sentiment analysis.</td>
-            </tr>
-            <tr>
-            <td>EDGAR</td>
-            <td>The Electronic Data Gathering, Analysis, and Retrieval system (EDGAR) is an online database maintained by the U.S. Securities and Exchange Commission (SEC) that provides free public access to corporate filings, including 10-K reports, 10-Q reports, and other disclosure documents.</td>
-            </tr>
-            <tr>
-            <td>ESG</td>
-            <td>Environmental, Social, and Governance (ESG) criteria are a set of non-financial factors used to evaluate a company's sustainability and ethical impact. ESG factors include environmental practices, social responsibility, and corporate governance.</td>
-            </tr>
-            <tr>
-            <td>Greenwashing</td>
-            <td>Greenwashing refers to the practice of misleading consumers or investors by falsely claiming to be environmentally friendly or sustainable, often through deceptive marketing or public relations efforts.</td>
-            </tr>
-            <tr>
-            <td>Greenwashing indicator framework</td>
-            <td>A framework used to assess and measure the extent of greenwashing in corporate communication or marketing materials. It typically involves evaluating specific criteria or indicators to identify instances of misleading or exaggerated environmental claims.</td>
-            </tr>
-            <tr>
-            <td>Market Cap</td>
-            <td>Market capitalization, often referred to as market cap, is the total value of a publicly traded company's outstanding shares of stock. It is calculated by multiplying the current share price by the total number of outstanding shares.</td>
-            </tr>
-            <tr>
-            <td>S&P</td>
-            <td>Standard & Poor's (S&P) is a financial services company that provides credit ratings, market intelligence, and investment research. It is best known for its stock market indices, including the S&P 500, which tracks the performance of 500 large-cap U.S. companies.</td>
-            </tr>
-            <tr>
-            <td>S&P 500</td>
-            <td>The S&P 500 is a stock market index that measures the performance of 500 large-cap U.S. companies listed on stock exchanges. It is widely regarded as one of the best indicators of the overall health of the U.S. stock market.</td>
-            </tr>
-            <tr>
-            <td>SEC</td>
-            <td>The U.S. Securities and Exchange Commission (SEC) is a federal agency responsible for enforcing federal securities laws, regulating the securities industry, and overseeing the stock and options exchanges in the United States.</td>
-            </tr>
-            <tr>
-            <td>Text analysis</td>
-            <td>Text analysis, also known as text mining or text analytics, is the process of extracting meaningful insights and information from unstructured text data. It involves techniques such as natural language processing, machine learning, and statistical analysis to analyze and interpret large volumes of text.</td>
-            </tr>
-        </table>              
-
-
-        <hr>
-
-
-        <!-- methodology -->
-        <h2> Analysis Approach Overview</h2>
-
-        <ol>
-            <li>
-              Gathered a list of S&P 50 companies from this <a href="https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"> Wikipedia page</a>. 
-            </li>
-            <li>
-              Compiled each company's latest SEC 10-K filing URL link via <a href="https://www.sec.gov/filings/edgar-guide"> the SEC EDGAR database</a>.
-            </li>
-            <li>
-              Extracted raw text for 10-K Section 1 (Business) and section 1A (Risk) from the <a href="https://pypi.org/project/sec-api/#10-k10-q8-k-section-extractor-api"> SEC 10-K Section Extractor API</a>.
-            </li>
-            <li>
-              Crossed-referenced extracted text with key climate-change bi-grams from this research: <a href="https://onlinelibrary.wiley.com/doi/10.1111/jofi.13219"> Firm-Level Climate Change Exposure</a> by Sautner, Van Lent, and Grigor (2023).
-            </li>
-            <li>
-                Examined text data to investigate the presence of climate change-related information within the SEC 10-K filings from S&P 50 companies. (See key findings below)
-            </li>
-
-          </ol>
-          
-        
-        <!-- <div id="container3"></div> -->
-        <hr>
-
-
-        <h3> Limitations of this study </h3>
-
-        <p> Coming soon
-
-
-
-        <hr>
-
-
-
-
-        </p>
-
-
-        <!-- Key Findings -->
-        <h2> Key Findings </h2>
-
-        <b>
-
-        <p> - 94% (47 out of 50) S&P50 companies acknowledged climate change as a risk in their business.
-        </p>
-        
-        <p> - 42% (21 out of 50) S&P50 companies mentioned climate change in their business sections .
-        </p>
-        
-        <p> - 32% (16 out of 50) S&P50 companies demonstrated authentic commitment to climate action in their SEC 10-K Filings.
-        </p>
-
-        <p> - 20% (10 out of 50) S&P50 companies demonstrated firm investment in climate action as an integral part of their business strategy.
-        
-        </b>
-
-
-
-        </p>
-
-
-        <hr>
-        
-
-        <h2> Detailed summary </h2>
-         <!-- What is SEC 10-K  -->
-         <h3> Quick introduction to SEC 10-K filing </h3>
-
-         <!-- <p> Coming soon
-         </p> -->
-         <!-- What are the key sections in the SEC 10-K form? -->
-         <p> What are the key sections in the SEC 10-K form? </p>
-         <p> More details to come .... </p>
-         <img src="./media/SEC_10-K_table_of_content.png" width="600" >  
-         <!-- <p> Coming soon
-         </p> -->
-                  
-        <hr>
-
-         <!-- Examples of ESG mentions -->
-         <h3> Examples of ESG mentions </h3>
-         <p> Companies usually have a dedicated section for ESG. </p>
-         <p> More details to come .... </p>
-         <img  src="./media/ACN.png" width="200" > 
-         <!-- <br> -->
-         <!-- <div class="url_img"> <img src="./media/AMZN.png" width="300" >  </div> -->
-         <!-- <br> -->
-         <img src="./media/JPM.png" width="200" >  
-         <!-- <br> -->
-         <img src="./media/VISA.png" width="200" > 
-         
-
-         <!-- <p>  Coming soon -->
-         <!-- </p> -->
-         <hr>
-
-      
-         <!-- Examples of ESG mentions -->
-         <h3> Five types of climate sentiments distribution in SEC 10-K Filings </h3>
-
-         <p> More details to come .... </p>
-
-        <div class="noborder">
-         <img src="./media/Figures/sentiment_type.png" width="700" > 
-        </div>
-
-
-        <hr>
-
-        <h5> S&P 50 companies's climate sentiments in SEC 10-K Fillings </h5>
-
-
-        <p> More details to come .... </p>
-
-
-        <div class="noborder"></div>
-        <img src="./media/Chart/sentiment_distro.png" width="500" >  
-        </div>
-
-
-        <hr>
-
-
-        <h4> Type 1: Invisible </h4>
-        <h5> Complete lack of acknowledgment </h5>
-
-        <!-- <div class="url_img"> <img src="./media/APPL.png" width="400" >  </div> -->
-        <p> <b>List of companies:</b> Comcast, Netflix, Wells Fargo.
-        </p>
-        <p> Example snippets: None, no mentions at all. . . </p>   
-        <br>
-        <br>
-        <br>
-
-
-
-              
-        <hr>
-        <h4> Type 2: Victimized </h4>
-        <h5> Acknowledgment of Climate Risk, inaction persisting. </h5>
-        <p> <b>List of companies:</b> Abbott, 
-            AbbVie, 
-            Adobe Inc., 
-            Advanced Micro Devices, 
-            Amazon, 
-            Apple Inc., 
-            Applied Materials, 
-            Bank of America, 
-            Chevron Corporation, 
-            Coca-Cola Company (The), 
-            Costco, 
-            Eli Lilly and Company, 
-            ExxonMobil, 
-            IBM, 
-            Intuit, 
-            Johnson & Johnson, 
-            JPMorgan Chase, 
-            Linde plc, 
-            Meta Platforms, 
-            Oracle Corporation, 
-            PepsiCo, 
-            Salesforce, 
-            Thermo Fisher Scientific, 
-            Uber, 
-            UnitedHealth Group, 
-            Verizon.
-        </p>
-        <p> Example snippets: </p>   
-        <p> Apple: </p>  
-         <img src="./media/APPL.png" width="400" > 
-
-         <hr>
-         <h4> Type 3: Tokenistic </h4>
-        <h5> Demonstration of surface-level climate action engagement. </h5>
-        <!-- <img src="./media/MSFT.png" width="400" >  -->
-        <p> <b>List of companies:</b> Broadcom Inc., 
-            Danaher Corporation, 
-            General Electric, 
-            Mastercard, 
-            Visa Inc.
-        </p>
-        <p> Example snippets: </p>   
-        <p> Visa: </p>  
-        <img src="./media/VISA.png" width="400" > 
-
-        <hr>
-        <h4> Type 4: Developing commitment </h4>
-        <h5> Demonstration of some engaged climate responsibility. </h5>
-
-        <p> <b>List of companies:</b> Berkshire Hathaway, 
-            Cisco, 
-            McDonald's, 
-            Tesla, Inc., 
-            Walmart, 
-            Walt Disney.
-        </p>
-        <p> Example snippets: </p>   
-        <p> Cisco: </p>  
-        <img src="./media/CSCO.png" width="400" > 
-        <p> Walmat: </p>  
-        <img src="./media/WMT.png" width="400" > 
-                          
-        <hr>
-         <h4> Type 5: Proactive Stewardship </h4>
-         <h5> Firmly invested in climate action as an integral part of business strategy. </h5>
- 
-         <p> <b>List of companies:</b> Berkshire Hathaway, 
-            Accenture, 
-            Alphabet Inc. (Google), 
-            The Home Depot, 
-            Intel, 
-            Merck & Co., 
-            Microsoft, 
-            Nvidia, 
-            Procter & Gamble, 
-            Qualcomm, 
-            T-Mobile US.
+            <p> As concerns regarding corporate sustainability and environmental responsibility grow, the phenomenon of
+                greenwashing becomes a critical area of scrutiny. While many Greenwashing Indicator (GWI) frameworks
+                have been developed to measure and identify greenwashing practices, they are often focusing on
+                sustainability reports. The intersection of greenwashing indicators with financial communications (e.g.
+                SEC Filings Form 10-K) remains an underexplored area. The objective of this research is to investigate
+                how sustainability is reflected in their financial reporting and to uncover any discrepancies or
+                inconsistencies that may indicate the presence of greenwashing strategies within corporate
+                communications.
             </p>
-            
-        <p> Example snippets: </p>   
-        <p> Accenture: </p>  
-        <img src="./media/ACN.png" width="400" > 
-        <p> Google: </p>  
-        <img src="./media/GOOGL.png" width="400" > 
-        <p> Nvidia: </p>  
-        <img src="./media/NVDA.png" width="400" > 
-        <p> T-Mobile US.: </p>  
-        <img src="./media/TMUS.png" width="400" > 
 
-         <hr>
+            <!-- <div id="container3"></div> -->
+            <hr>
+
+            <!-- Abstract -->
+            <h2> Abstract </h2>
+
+            <p> This capstone project focuses on analyzing SEC Filings Form 10-K of S&P companies to investigate how
+                sustainability shows up in their financial reportings. The study aims to distinguish these authentic
+                representations from potential greenwashing narratives and lies often found in optional CRS reports and
+                marketing materials. Informed by existing studies on greenwashing indicators, the research establishes a
+                framework applied to assess environmental claims and narratives of leading public companies. The study
+                aims to provide valuable insights for researchers, practitioners, and policymakers interested in
+                enhancing the effectiveness of greenwashing detection methodologies.
+            </p>
+
+            <!-- <div id="container3"></div> -->
+            <hr>
+
+            <!-- Glossary -->
+            <h2> Glossary </h2>
+
+            <table class="term">
+                <tr>
+                    <td class="term header">Term</td>
+                    <td class="term header"> Definition</td>
+                </tr>
+                <tr>
+                    <td>10-K Filing</td>
+                    <td>An annual report filed by publicly traded companies to the Securities and Exchange Commission
+                        (SEC). It provides a comprehensive overview of the company's financial performance, risks, and
+                        management discussion and analysis.</td>
+                </tr>
+                <tr>
+                    <td>1 - Business</td>
+                    <td>Section 1 of a company's 10-K filing, which provides information about the company's business
+                        operations, including its products and services, market segments, and competitive landscape.
+                    </td>
+                </tr>
+                <tr>
+                    <td> 1A - Risk</td>
+                    <td>Section 1A of a company's 10-K filing, which outlines the key risks and uncertainties facing the
+                        company, including financial, market, regulatory, and operational risks.</td>
+                </tr>
+                <tr>
+                    <td>Bi-gram</td>
+                    <td>In text analysis, a bi-gram refers to a sequence of two adjacent words or tokens occurring in a
+                        document or a corpus. Bi-grams are commonly used in natural language processing tasks such as
+                        language modeling and sentiment analysis.</td>
+                </tr>
+                <tr>
+                    <td>EDGAR</td>
+                    <td>The Electronic Data Gathering, Analysis, and Retrieval system (EDGAR) is an online database
+                        maintained by the U.S. Securities and Exchange Commission (SEC) that provides free public access
+                        to corporate filings, including 10-K reports, 10-Q reports, and other disclosure documents.</td>
+                </tr>
+                <tr>
+                    <td>ESG</td>
+                    <td>Environmental, Social, and Governance (ESG) criteria are a set of non-financial factors used to
+                        evaluate a company's sustainability and ethical impact. ESG factors include environmental
+                        practices, social responsibility, and corporate governance.</td>
+                </tr>
+                <tr>
+                    <td>Greenwashing</td>
+                    <td>Greenwashing refers to the practice of misleading consumers or investors by falsely claiming to
+                        be environmentally friendly or sustainable, often through deceptive marketing or public
+                        relations efforts.</td>
+                </tr>
+                <tr>
+                    <td>Greenwashing indicator framework</td>
+                    <td>A framework used to assess and measure the extent of greenwashing in corporate communication or
+                        marketing materials. It typically involves evaluating specific criteria or indicators to
+                        identify instances of misleading or exaggerated environmental claims.</td>
+                </tr>
+                <tr>
+                    <td>Market Cap</td>
+                    <td>Market capitalization, often referred to as market cap, is the total value of a publicly traded
+                        company's outstanding shares of stock. It is calculated by multiplying the current share price
+                        by the total number of outstanding shares.</td>
+                </tr>
+                <tr>
+                    <td>S&P</td>
+                    <td>Standard & Poor's (S&P) is a financial services company that provides credit ratings, market
+                        intelligence, and investment research. It is best known for its stock market indices, including
+                        the S&P 500, which tracks the performance of 500 large-cap U.S. companies.</td>
+                </tr>
+                <tr>
+                    <td>S&P 500</td>
+                    <td>The S&P 500 is a stock market index that measures the performance of 500 large-cap U.S.
+                        companies listed on stock exchanges. It is widely regarded as one of the best indicators of the
+                        overall health of the U.S. stock market.</td>
+                </tr>
+                <tr>
+                    <td>SEC</td>
+                    <td>The U.S. Securities and Exchange Commission (SEC) is a federal agency responsible for enforcing
+                        federal securities laws, regulating the securities industry, and overseeing the stock and
+                        options exchanges in the United States.</td>
+                </tr>
+                <tr>
+                    <td>Text analysis</td>
+                    <td>Text analysis, also known as text mining or text analytics, is the process of extracting
+                        meaningful insights and information from unstructured text data. It involves techniques such as
+                        natural language processing, machine learning, and statistical analysis to analyze and interpret
+                        large volumes of text.</td>
+                </tr>
+            </table>
+
+
+            <hr>
+
+
+            <!-- methodology -->
+            <h2> Analysis Approach Overview</h2>
+
+            <ol>
+                <li>
+                    Gathered a list of S&P 50 companies from this <a
+                        href="https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"> Wikipedia page</a>.
+                </li>
+                <li>
+                    Compiled each company's latest SEC 10-K filing URL link via <a
+                        href="https://www.sec.gov/filings/edgar-guide"> the SEC EDGAR database</a>.
+                </li>
+                <li>
+                    Extracted raw text for 10-K Section 1 (Business) and section 1A (Risk) from the <a
+                        href="https://pypi.org/project/sec-api/#10-k10-q8-k-section-extractor-api"> SEC 10-K Section
+                        Extractor API</a>.
+                </li>
+                <!-- <li>
+              Crossed-referenced extracted text with key climate-change bi-grams from this research: <a href="https://onlinelibrary.wiley.com/doi/10.1111/jofi.13219"> Firm-Level Climate Change Exposure</a> by Sautner, Van Lent, and Grigor (2023).
+            </li> -->
+                <li>
+                    Examined text data to investigate the presence of climate change-related information within the SEC
+                    10-K filings from S&P 50 companies. (See key findings below)
+                </li>
+
+                <li>
+                    Leveraged common Greewashing Indicator heuristics to create a tiered system to evaluate climate
+                    change sentiment demonstrated in SEC 10-K filings.
+                </li>
+
+            </ol>
+
+
+            <!-- <div id="container3"></div> -->
+            <hr>
+
+
+            <h3> Limitations of this study </h3>
+
+            <p> Coming soon
 
 
 
-        <hr>
+                <hr>
 
 
 
 
-        <h2> Conclusions </h2>
-    
-        <p> Coming soon
-        </p>
+            </p>
 
-        <hr>
 
-        <h3> References </h3>
+            <!-- Key Findings -->
+            <h2> Key Findings </h2>
 
-        <p> Coming soon
-        </p>
-                           
+            <b>
+
+                <p> - 94% (47 out of 50) S&P50 companies acknowledged climate change as a risk in their business.
+                </p>
+
+                <p> - 42% (21 out of 50) S&P50 companies mentioned climate change in their business sections .
+                </p>
+
+                <p> - 32% (16 out of 50) S&P50 companies demonstrated authentic commitment to climate action in their
+                    SEC 10-K Filings.
+                </p>
+
+                <p> - 20% (10 out of 50) S&P50 companies demonstrated firm investment in climate action as an integral
+                    part of their business strategy.
+
+            </b>
+
+
+
+            </p>
+
+
+            <hr>
+
+
+            <h2> Detailed summary </h2>
+            <!-- What is SEC 10-K  -->
+            <h3> Quick introduction to SEC 10-K filing </h3>
+
+            <!-- <p> Coming soon
+         </p> -->
+            <!-- What are the key sections in the SEC 10-K form? -->
+            <p> What are the key sections in the SEC 10-K form? </p>
+            <p> More details to come .... </p>
+            <img src="./media/SEC_10-K_table_of_content.png" width="600">
+            <!-- <p> Coming soon
+         </p> -->
+
+            <hr>
+
+            <!-- Examples of ESG mentions -->
+            <h3> Examples of ESG mentions </h3>
+            <p> Companies usually have a dedicated section for ESG. </p>
+            <p> More details to come .... </p>
+            <img src="./media/ACN.png" width="200">
+            <!-- <br> -->
+            <!-- <div class="url_img"> <img src="./media/AMZN.png" width="300" >  </div> -->
+            <!-- <br> -->
+            <img src="./media/JPM.png" width="200">
+            <!-- <br> -->
+            <img src="./media/VISA.png" width="200">
+
+
+            <!-- <p>  Coming soon -->
+            <!-- </p> -->
+            <hr>
+
+
+            <!-- Examples of ESG mentions -->
+            <h3> A framework with five types of climate sentiments in SEC 10-K Filings </h3>
+
+            <p> More details to come .... </p>
+
+            <div class="noborder">
+                <img src="./media/Figures/sentiment_type.png" width="700">
+            </div>
+
+
+            <hr>
+
+            <h5> Distirbution of climate sentiments in SEC 10-K Fillings of S&P 50 companies</h5>
+
+
+            <p> More details to come .... </p>
+
+
+            <div class="noborder"></div>
+            <img src="./media/Chart/sentiment_distro.png" width="500">
+    </div>
+
+
+    <hr>
+
+
+    <h4> Type 1: Invisible </h4>
+    <h5> Complete lack of acknowledgment </h5>
+
+    <!-- <div class="url_img"> <img src="./media/APPL.png" width="400" >  </div> -->
+    <p> <b>List of companies:</b> Comcast, Netflix, Wells Fargo.
+    </p>
+    <p> Example snippets: None, no mentions at all. . . </p>
+    <br>
+    <br>
+    <br>
+
+
+
+
+    <hr>
+    <h4> Type 2: Victimized </h4>
+    <h5> Acknowledgment of Climate Risk, inaction persisting. </h5>
+    <p> <b>List of companies:</b> Abbott,
+        AbbVie,
+        Adobe Inc.,
+        Advanced Micro Devices,
+        Amazon,
+        Apple Inc.,
+        Applied Materials,
+        Bank of America,
+        Chevron Corporation,
+        Coca-Cola Company (The),
+        Costco,
+        Eli Lilly and Company,
+        ExxonMobil,
+        IBM,
+        Intuit,
+        Johnson & Johnson,
+        JPMorgan Chase,
+        Linde plc,
+        Meta Platforms,
+        Oracle Corporation,
+        PepsiCo,
+        Salesforce,
+        Thermo Fisher Scientific,
+        Uber,
+        UnitedHealth Group,
+        Verizon.
+    </p>
+    <p> Example snippets: </p>
+    <p> Apple: </p>
+    <img src="./media/APPL.png" width="400">
+
+    <hr>
+    <h4> Type 3: Tokenistic </h4>
+    <h5> Demonstration of surface-level climate action engagement. </h5>
+    <!-- <img src="./media/MSFT.png" width="400" >  -->
+    <p> <b>List of companies:</b> Broadcom Inc.,
+        Danaher Corporation,
+        General Electric,
+        Mastercard,
+        Visa Inc.
+    </p>
+    <p> Example snippets: </p>
+    <p> Visa: </p>
+    <img src="./media/VISA.png" width="400">
+
+    <hr>
+    <h4> Type 4: Developing commitment </h4>
+    <h5> Demonstration of some engaged climate responsibility. </h5>
+
+    <p> <b>List of companies:</b> Berkshire Hathaway,
+        Cisco,
+        McDonald's,
+        Tesla, Inc.,
+        Walmart,
+        Walt Disney.
+    </p>
+    <p> Example snippets: </p>
+    <p> Cisco: </p>
+    <img src="./media/CSCO.png" width="400">
+    <p> Walmat: </p>
+    <img src="./media/WMT.png" width="400">
+
+    <hr>
+    <h4> Type 5: Proactive Stewardship </h4>
+    <h5> Firmly invested in climate action as an integral part of business strategy. </h5>
+
+    <p> <b>List of companies:</b> Berkshire Hathaway,
+        Accenture,
+        Alphabet Inc. (Google),
+        The Home Depot,
+        Intel,
+        Merck & Co.,
+        Microsoft,
+        Nvidia,
+        Procter & Gamble,
+        Qualcomm,
+        T-Mobile US.
+    </p>
+
+    <p> Example snippets: </p>
+    <p> Accenture: </p>
+    <img src="./media/ACN.png" width="400">
+    <p> Google: </p>
+    <img src="./media/GOOGL.png" width="400">
+    <p> Nvidia: </p>
+    <img src="./media/NVDA.png" width="400">
+    <p> T-Mobile US.: </p>
+    <img src="./media/TMUS.png" width="400">
+
+    <hr>
+
+
+
+    <hr>
+
+
+
+
+    <h2> Conclusions </h2>
+
+    <p> Coming soon
+    </p>
+
+    <hr>
+
+    <h3> References </h3>
+
+    <p> Coming soon
+    </p>
+
 
 
 
@@ -365,48 +422,57 @@
     </p>
 
 
-       <!-- List of climate change keywords  -->
-       <h3> List of climate change keywords  </h3>
-       To expand "climate change" keywords, I am referencing the Top 100 bi-gram from the "Firm-Level Climate Change Exposure" resarch by Sautner, Van Lent, and Grigor (2023) as they covers many angles of climate change.  
-       See list of keyword here: 
-       <br>
-       <br>
-       <img src="./media/Chart/top_100_bigram_list.png" width="400" >  
+    <!-- List of climate change keywords  -->
+    <h3> List of climate change keywords </h3>
 
-       <hr>
+    <p>
+    To expand "climate change" keywords, I am referencing the Top 100 bi-gram from the "Firm-Level Climate Change
+    Exposure" resarch by Sautner, Van Lent, and Grigor (2023) as they covers many angles of climate change.
+    See list of keyword here:
+    </p>
+    
+    <br>
+    <br>
+    <img src="./media/Chart/top_100_bigram_list.png" width="200">
 
-       <!-- Top 100 bigram -->
-       <h3> How often are these top 100 bigrams mentioned in the 10-K business and the risk section, respectively?  </h3>
-       <br>
-       <img src="./media/Chart/bigram_count_by_company_heatmap.png" width="600" >  
+    <hr>
 
-       <hr>
+    <!-- Top 100 bigram -->
+    <h3> How often are these top 100 bigrams mentioned in the 10-K business and the risk section, respectively? </h3>
+    <br>
+    <img src="./media/Chart/bigram_count_by_company_heatmap.png" width="200">
 
-       <!-- acknolwedged climate change as a risk in thier business  -->
-       <h3> Most S&P 50 companies acknolwedged climate change as a risk in thier business </h3>
+    <hr>
 
-       <p> Coming soon
-       </p>
-       <img src="./media/Chart/bi_gram_biz_distro.png" width="300" >  
-       <img src="./media/Chart/bigram_biz_risk_diff.png" width="300" >  
-        
-       
-       <hr>
-       <!-- Examples -->
-       <h3> How does top key words compare in the business and the risk section, respectively? </h3>
-       <p> We look at the top 10 (most frequently) mentioned bi-grams for each of the two 10-K section, 
-           and their relative ranking in the other section.
-       </p>
+    <!-- acknolwedged climate change as a risk in thier business  -->
+    <h3> Most S&P 50 companies acknolwedged climate change as a risk in thier business </h3>
 
-       <img src="./media/Chart/Top_10_biz_bigram.png" width="300" >  
-       <img src="./media/Chart/Top_10_risk_bigram.png" width="300" >  
+    <p> Coming soon
+    </p>
+    <img src="./media/Chart/bi_gram_biz_distro.png" width="100">
+    <img src="./media/Chart/bigram_biz_risk_diff.png" width="100">
 
-             
-       <hr>     
 
-            
+    <hr>
+    <!-- Examples -->
+    <h3> How does top key words compare in the business and the risk section, respectively? </h3>
+    <p> We look at the top 10 (most frequently) mentioned bi-grams for each of the two 10-K section,
+        and their relative ranking in the other section.
+    </p>
+
+    <img src="./media/Chart/Top_10_biz_bigram.png" width="100">
+    <img src="./media/Chart/Top_10_risk_bigram.png" width="100">
+
+
+    <hr>
+
+
 
     </main>
+    </div>
     <script src="script.js"></script>
+
+
 </body>
+
 </html>
