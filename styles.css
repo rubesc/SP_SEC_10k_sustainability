@@ -123,6 +123,12 @@ li {
   margin-bottom: 15px;
 }
 
+.limitations-list {
+  color: #666060; /* Dark grey color */
+  font-size: 12px; /* Smaller font size */
+}
+
+
 a {
   color: #007bff;
   text-decoration: none;

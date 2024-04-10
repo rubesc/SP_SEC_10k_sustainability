@@ -1,8 +1,11 @@
 # SP_SEC_10k_sustainability
 
 
-## Overview
-As concerns regarding corporate sustainability and environmental responsibility grow, the phenomenon of greenwashing becomes a critical area of scrutiny. While many Greenwashing Indicator (GWI) frameworks have been developed to measure and identify greenwashing practices, they are often focusing on sustainability reports. The intersection of greenwashing indicators with financial communications (e.g. SEC Filings Form 10-K) remains an underexplored area. The objective of this research is to investigate how sustainability is reflected in their financial reporting and to uncover any discrepancies or inconsistencies that may indicate the presence of greenwashing strategies within corporate communications.
+## Context
+
+As concerns regarding corporate sustainability and environmental responsibility continue to mount, the phenomenon of greenwashing emerges as an area of critical scrutiny. While numerous Greenwashing Indicator (GWI) frameworks have been devised to measure and identify greenwashing practices, they predominantly target sustainability reports and green-labeled products. However, the intersection of greenwashing indicators with financial communications, such as SEC Filings Form 10-K, remains relatively underexplored.
+
+This research aims to bridge this gap by examining how sustainability is manifested in financial reporting, particularly within SEC Filings Form 10-K. This focus is pivotal because these SEC filings hold legal weight and undergo thorough examination. This approach offers a unique perspective on corporations' climate action positions. In our market-driven capitalist environment, publicly traded companies often prioritize profits over environmental concerns, guided by shareholder interests. This study intends to illuminate the extent to which climate action is integrated into a company's core operations, strategy, and risk management. Given the legally binding nature of 10-K filings, they serve as an ideal arena for such exploration.
 
 ## Abstract
 
