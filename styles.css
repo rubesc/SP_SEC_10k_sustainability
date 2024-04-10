@@ -52,7 +52,7 @@ h1 {
 
 
 h2 {
-  font-size: 20px;
+  font-size: 30px;
   color: rgb(71, 181, 97);
 }
 
@@ -61,7 +61,7 @@ h3 {
   font-size: 24px;
   margin: 0.25em 0;
   font-weight: 400;
-  color: rgb(95, 185, 119);
+  color: rgb(35, 124, 138);
 }
 
 h4 {
@@ -72,7 +72,7 @@ h4 {
 }
 
 h5 {
-  font-size: 12px;
+  font-size: 16px;
   color: rgb(80, 143, 97);
   font-weight: 400;
 }
@@ -86,8 +86,13 @@ p {
   margin-right: auto;
   display: flex;
   box-sizing: border-box;
+  margin: 0; /* Remove default margin */
+  padding: 5px 0; /* Add padding only to top and bottom */
 }
 
+b {
+  font-weight: bold; /* Ensure bold text */
+}
 
 hr {
   height: 2px;
@@ -121,11 +126,15 @@ ol {
 
 li {
   margin-bottom: 15px;
+  list-style: none; /* Remove default bullet points */
 }
+
 
 .limitations-list {
   color: #666060; /* Dark grey color */
   font-size: 12px; /* Smaller font size */
+  margin: 0;
+  padding: 1em;
 }
 
 
@@ -142,10 +151,13 @@ a:hover {
 table {
   width: 100%;
   max-width: 100%;
-  /* Set maximum width */
-  /* overflow-x: auto; Enable horizontal scrolling when necessary */
   table-layout: fixed;
   border-collapse: collapse;
+}
+
+td:first-child {
+  font-weight: bold;
+  width: 30%;
 }
 
 th,
