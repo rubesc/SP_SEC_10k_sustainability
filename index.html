@@ -13,8 +13,9 @@
     <div class="container">
 
         <header>
-            <h1> Climate Sentiment in SEC 10-K Filings of S&P 50 Companie </h1>
-            <h7> By RC (April 2024)</h7>
+            <h1> Climate Sentiment in SEC 10-K Filings of S&P 50 Companies </h1>
+            <h7> by R. Chu [April, 2024]</h7>
+
         </header>
 
         <main>
@@ -144,19 +145,18 @@
 
 
             <!-- methodology -->
-            <h2> Analysis Approach Overview</h2>
+            <h2> Approach Overview</h2>
 
             <ol>
                 <li>
-                    Gathered a list of S&P 50 companies from this <a
+                    Gathered a list of S&P 50 companies from a <a
                         href="https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"> Wikipedia page</a>.
                 </li>
                 <li>
-                    Compiled each company's latest SEC 10-K filing URL link via <a
-                        href="https://www.sec.gov/filings/edgar-guide"> the SEC EDGAR database</a>.
+                    Collected the latest SEC 10-K filing URLs for each company using the
+                    <a href="https://www.sec.gov/filings/edgar-guide"> SEC EDGAR database</a>.
                 </li>
-                <li>
-                    Extracted raw text for 10-K Section 1 (Business) and section 1A (Risk) from the <a
+                <li>Retrieve the raw text from Sections 1 (Business) and 1A (Risk) of the 10-K filings utilizing the <a
                         href="https://pypi.org/project/sec-api/#10-k10-q8-k-section-extractor-api"> SEC 10-K Section
                         Extractor API</a>.
                 </li>
@@ -164,34 +164,30 @@
               Crossed-referenced extracted text with key climate-change bi-grams from this research: <a href="https://onlinelibrary.wiley.com/doi/10.1111/jofi.13219"> Firm-Level Climate Change Exposure</a> by Sautner, Van Lent, and Grigor (2023).
             </li> -->
                 <li>
-                    Examined text data to investigate the presence of climate change-related information within the SEC
-                    10-K filings from S&P 50 companies. (See key findings below)
+                    Analyzed the extent of climate change-related information present within the specified sections of
+                    the SEC 10-K filings of S&P 50 companies.
                 </li>
 
                 <li>
-                    Leveraged common Greewashing Indicator heuristics to create a tiered system to evaluate climate
+                    Utilized common Greenwashing Indicator heuristics to develop a tiered system for evaluating climate
                     change sentiment demonstrated in SEC 10-K filings.
                 </li>
 
             </ol>
 
 
-            <!-- <div id="container3"></div> -->
+            <h3> Limitations of this study </h3>
+
+            <p> Coming soon </p>
+
+
+
             <hr>
 
 
-            <h3> Limitations of this study </h3>
-
-            <p> Coming soon
 
 
-
-                <hr>
-
-
-
-
-            </p>
+            
 
 
             <!-- Key Findings -->
@@ -223,17 +219,18 @@
 
 
             <h2> Detailed summary </h2>
+
             <!-- What is SEC 10-K  -->
             <h3> Quick introduction to SEC 10-K filing </h3>
 
             <!-- <p> Coming soon
-         </p> -->
+            </p> -->
             <!-- What are the key sections in the SEC 10-K form? -->
             <p> What are the key sections in the SEC 10-K form? </p>
             <p> More details to come .... </p>
             <img src="./media/SEC_10-K_table_of_content.png" width="600">
             <!-- <p> Coming soon
-         </p> -->
+            </p> -->
 
             <hr>
 
@@ -273,202 +270,165 @@
             <p> More details to come .... </p>
 
 
-            <div class="noborder"></div>
-            <img src="./media/Chart/sentiment_distro.png" width="500">
-    </div>
+            <div class="noborder">
+                <img src="./media/Chart/sentiment_distro.png" width="500">
+            </div>
+
+            <hr>
 
 
-    <hr>
+            <h4> Type 1: Invisible </h4>
+            <h5> Complete lack of acknowledgment </h5>
 
-
-    <h4> Type 1: Invisible </h4>
-    <h5> Complete lack of acknowledgment </h5>
-
-    <!-- <div class="url_img"> <img src="./media/APPL.png" width="400" >  </div> -->
-    <p> <b>List of companies:</b> Comcast, Netflix, Wells Fargo.
-    </p>
-    <p> Example snippets: None, no mentions at all. . . </p>
-    <br>
-    <br>
-    <br>
-
-
-
-
-    <hr>
-    <h4> Type 2: Victimized </h4>
-    <h5> Acknowledgment of Climate Risk, inaction persisting. </h5>
-    <p> <b>List of companies:</b> Abbott,
-        AbbVie,
-        Adobe Inc.,
-        Advanced Micro Devices,
-        Amazon,
-        Apple Inc.,
-        Applied Materials,
-        Bank of America,
-        Chevron Corporation,
-        Coca-Cola Company (The),
-        Costco,
-        Eli Lilly and Company,
-        ExxonMobil,
-        IBM,
-        Intuit,
-        Johnson & Johnson,
-        JPMorgan Chase,
-        Linde plc,
-        Meta Platforms,
-        Oracle Corporation,
-        PepsiCo,
-        Salesforce,
-        Thermo Fisher Scientific,
-        Uber,
-        UnitedHealth Group,
-        Verizon.
-    </p>
-    <p> Example snippets: </p>
-    <p> Apple: </p>
-    <img src="./media/APPL.png" width="400">
-
-    <hr>
-    <h4> Type 3: Tokenistic </h4>
-    <h5> Demonstration of surface-level climate action engagement. </h5>
-    <!-- <img src="./media/MSFT.png" width="400" >  -->
-    <p> <b>List of companies:</b> Broadcom Inc.,
-        Danaher Corporation,
-        General Electric,
-        Mastercard,
-        Visa Inc.
-    </p>
-    <p> Example snippets: </p>
-    <p> Visa: </p>
-    <img src="./media/VISA.png" width="400">
-
-    <hr>
-    <h4> Type 4: Developing commitment </h4>
-    <h5> Demonstration of some engaged climate responsibility. </h5>
-
-    <p> <b>List of companies:</b> Berkshire Hathaway,
-        Cisco,
-        McDonald's,
-        Tesla, Inc.,
-        Walmart,
-        Walt Disney.
-    </p>
-    <p> Example snippets: </p>
-    <p> Cisco: </p>
-    <img src="./media/CSCO.png" width="400">
-    <p> Walmat: </p>
-    <img src="./media/WMT.png" width="400">
-
-    <hr>
-    <h4> Type 5: Proactive Stewardship </h4>
-    <h5> Firmly invested in climate action as an integral part of business strategy. </h5>
-
-    <p> <b>List of companies:</b> Berkshire Hathaway,
-        Accenture,
-        Alphabet Inc. (Google),
-        The Home Depot,
-        Intel,
-        Merck & Co.,
-        Microsoft,
-        Nvidia,
-        Procter & Gamble,
-        Qualcomm,
-        T-Mobile US.
-    </p>
-
-    <p> Example snippets: </p>
-    <p> Accenture: </p>
-    <img src="./media/ACN.png" width="400">
-    <p> Google: </p>
-    <img src="./media/GOOGL.png" width="400">
-    <p> Nvidia: </p>
-    <img src="./media/NVDA.png" width="400">
-    <p> T-Mobile US.: </p>
-    <img src="./media/TMUS.png" width="400">
-
-    <hr>
-
-
-
-    <hr>
+            <!-- <div class="url_img"> <img src="./media/APPL.png" width="400" >  </div> -->
+            <p> <b>List of companies:</b> </p>
+            <p> Comcast, Netflix, Wells Fargo.
+            </p>
+            <br>
+            <p> Example snippets: None, no mentions at all. . . </p>
+            <br>
+            <br>
+            <br>
 
 
 
 
-    <h2> Conclusions </h2>
+            <hr>
+            <h4> Type 2: Victimized </h4>
+            <h5> Acknowledgment of Climate Risk, inaction persisting. </h5>
 
-    <p> Coming soon
-    </p>
+            <p> <b>List of companies:</b> </p>
+            <p> Abbott,
+                AbbVie,
+                Adobe Inc.,
+                Advanced Micro Devices,
+                Amazon,
+                Apple Inc.,
+                Applied Materials,
+                Bank of America,
+                Chevron Corporation,
+                Coca-Cola Company (The),
+                Costco,
+                Eli Lilly and Company,
+                ExxonMobil,
+                IBM,
+                Intuit,
+                Johnson & Johnson,
+                JPMorgan Chase,
+                Linde plc,
+                Meta Platforms,
+                Oracle Corporation,
+                PepsiCo,
+                Salesforce,
+                Thermo Fisher Scientific,
+                Uber,
+                UnitedHealth Group,
+                Verizon.
+            </p>
+            <br>
+            <p> Example snippets: </p>
+            <p> Apple: </p>
+            <img src="./media/APPL.png" width="400">
 
-    <hr>
+            <hr>
+            <h4> Type 3: Tokenistic </h4>
+            <h5> Demonstration of surface-level climate action engagement. </h5>
+            <!-- <img src="./media/MSFT.png" width="400" >  -->
 
-    <h3> References </h3>
+            <p> <b>List of companies:</b> </p>
+            <p> Danaher Corporation,
+                General Electric,
+                Mastercard,
+                Visa Inc.
+            </p>
+            <br>
 
-    <p> Coming soon
-    </p>
+            <p> Example snippets: </p>
+            <p> Visa: </p>
+            <img src="./media/VISA.png" width="400">
 
-
-
-
-    <hr>
-
-
-
-
-    <h3> Appendix </h3>
-
-    <p> Might remove...
-    </p>
-
-
-    <!-- List of climate change keywords  -->
-    <h3> List of climate change keywords </h3>
-
-    <p>
-    To expand "climate change" keywords, I am referencing the Top 100 bi-gram from the "Firm-Level Climate Change
-    Exposure" resarch by Sautner, Van Lent, and Grigor (2023) as they covers many angles of climate change.
-    See list of keyword here:
-    </p>
-    
-    <br>
-    <br>
-    <img src="./media/Chart/top_100_bigram_list.png" width="200">
-
-    <hr>
-
-    <!-- Top 100 bigram -->
-    <h3> How often are these top 100 bigrams mentioned in the 10-K business and the risk section, respectively? </h3>
-    <br>
-    <img src="./media/Chart/bigram_count_by_company_heatmap.png" width="200">
-
-    <hr>
-
-    <!-- acknolwedged climate change as a risk in thier business  -->
-    <h3> Most S&P 50 companies acknolwedged climate change as a risk in thier business </h3>
-
-    <p> Coming soon
-    </p>
-    <img src="./media/Chart/bi_gram_biz_distro.png" width="100">
-    <img src="./media/Chart/bigram_biz_risk_diff.png" width="100">
-
-
-    <hr>
-    <!-- Examples -->
-    <h3> How does top key words compare in the business and the risk section, respectively? </h3>
-    <p> We look at the top 10 (most frequently) mentioned bi-grams for each of the two 10-K section,
-        and their relative ranking in the other section.
-    </p>
-
-    <img src="./media/Chart/Top_10_biz_bigram.png" width="100">
-    <img src="./media/Chart/Top_10_risk_bigram.png" width="100">
+            <hr>
+            <h4> Type 4: Developing commitment </h4>
+            <h5> Demonstration of some engaged climate responsibility. </h5>
 
 
-    <hr>
+            <p> <b>List of companies:</b> </p>
+            <p> Cisco,
+                McDonald's,
+                Tesla, Inc.,
+                Walmart,
+                Walt Disney.
+            </p>
+            <br>
+
+            <p> Example snippets: </p>
+            <p> Cisco: </p>
+            <img src="./media/CSCO.png" width="400">
+            <p> Walmat: </p>
+            <img src="./media/WMT.png" width="400">
+
+            <hr>
+            <h4> Type 5: Proactive Stewardship </h4>
+            <h5> Firmly invested in climate action as an integral part of business strategy. </h5>
+
+
+            <p> <b>List of companies:</b> </p>
+            <p> Berkshire Hathaway,
+                Accenture,
+                Alphabet Inc. (Google),
+                The Home Depot,
+                Intel,
+                Merck & Co.,
+                Microsoft,
+                Nvidia,
+                Procter & Gamble,
+                Qualcomm,
+                T-Mobile US.
+            </p>
+            <br>
+
+            <p> Example snippets: </p>
+            <p> Accenture: </p>
+            <img src="./media/ACN.png" width="400">
+            <p> Google: </p>
+            <img src="./media/GOOGL.png" width="400">
+            <p> Nvidia: </p>
+            <img src="./media/NVDA.png" width="400">
+            <p> T-Mobile US.: </p>
+            <img src="./media/TMUS.png" width="400">
+
+            <hr>
+
+
+            <h2> Conclusions </h2>
+
+            <p> Coming soon
+            </p>
+
+            <hr>
+
+            <h3> References </h3>
+
+            <p> Coming soon
+            </p>
 
 
 
-    </main>
+
+            <hr>
+
+
+
+
+            <h3> Appendix </h3>
+
+
+
+            <hr>
+
+
+
+        </main>
     </div>
     <script src="script.js"></script>
 
