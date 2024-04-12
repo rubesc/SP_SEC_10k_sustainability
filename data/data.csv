@@ -1,0 +1,51 @@
+S&P_RANK,COMPANY_NAME,STOCK_SYMBOL,MARKET_CAP,FILED,FILED_FOR_DATE,SEC_10K,SENTIMENT_TYPE
+1,Microsoft,MSFT,"$3,002,343,620,608",7/27/2023,6/30/2023,https://www.sec.gov/Archives/edgar/data/789019/000095017023035122/msft-20230630.htm,5. Proactive Stewardship
+2,Apple Inc.,AAPL,"$2,815,212,650,496",11/3/2023,9/30/2023,https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm,2. Victimized
+3,Nvidia,NVDA,"$1,793,541,144,576",2/24/2023,1/29/2023,https://www.sec.gov/Archives/edgar/data/1045810/000104581023000017/nvda-20230129.htm,5. Proactive Stewardship
+4,Amazon,AMZN,"$1,760,768,032,768",2/2/2024,12/31/2023,https://www.sec.gov/Archives/edgar/data/1018724/000101872424000008/amzn-20231231.htm,2. Victimized
+5,Alphabet Inc. (Class A),GOOGL,"$1,754,293,862,400",1/31/2024,12/31/2023,https://www.sec.gov/Archives/edgar/data/1652044/000165204424000022/goog-20231231.htm,5. Proactive Stewardship
+6,Meta Platforms,META,"$1,206,686,842,880",2/2/2024,12/31/2023,https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/meta-20231231.htm,2. Victimized
+7,Berkshire Hathaway,BRK.B,"$800,000,000,000",2/27/2023,12/31/2022,https://www.sec.gov/Archives/edgar/data/1067983/000095017023004451/brka-20221231.htm,4. Developing commitment
+8,Eli Lilly and Company,LLY,"$742,415,007,744",2/22/2023,12/31/2022,https://www.sec.gov/Archives/edgar/data/59478/000005947823000082/lly-20221231.htm,2. Victimized
+9,"Tesla, Inc.",TSLA,"$636,798,763,008",1/29/2024,12/31/2023,https://www.sec.gov/Archives/edgar/data/1318605/000162828024002390/tsla-20231231.htm,4. Developing commitment
+10,Broadcom Inc.,AVGO,"$583,060,226,048",12/14/2023,10/29/2023,https://www.sec.gov/Archives/edgar/data/1730168/000173016823000096/avgo-20231029.htm,3. Tokenistic
+11,Visa Inc.,V,"$572,181,708,800",11/15/2023,9/30/2023,https://www.sec.gov/Archives/edgar/data/1403161/000140316123000099/v-20230930.htm,3. Tokenistic
+12,JPMorgan Chase,JPM,"$515,015,573,504",2/16/2024,12/31/2023,https://www.sec.gov/Archives/edgar/data/19617/000001961724000225/jpm-20231231.htm,2. Victimized
+13,UnitedHealth Group,UNH,"$482,394,603,520",2/24/2023,12/31/2022,https://www.sec.gov/Archives/edgar/data/731766/000073176623000008/unh-20221231.htm,2. Victimized
+14,Walmart,WMT,"$458,648,289,280",3/17/2023,1/31/2023,https://www.sec.gov/Archives/edgar/data/104169/000010416923000020/wmt-20230131.htm,4. Developing commitment
+15,Mastercard,MA,"$436,714,766,336",2/13/2024,12/31/2023,https://www.sec.gov/Archives/edgar/data/1141391/000114139124000022/ma-20231231.htm,3. Tokenistic
+16,ExxonMobil,XOM,"$411,911,847,936",2/22/2023,12/31/2022,https://www.sec.gov/Archives/edgar/data/34088/000003408823000020/xom-20221231.htm,2. Victimized
+17,Johnson & Johnson,JNJ,"$377,092,964,352",2/16/2024,12/31/2023,https://www.sec.gov/Archives/edgar/data/200406/000020040624000013/jnj-20231231.htm,2. Victimized
+18,Procter & Gamble,PG,"$370,624,167,936",8/4/2023,6/30/2023,https://www.sec.gov/Archives/edgar/data/80424/000008042423000073/pg-20230630.htm,5. Proactive Stewardship
+19,Home Depot (The),HD,"$360,633,204,736",3/15/2023,1/29/2023,https://www.sec.gov/Archives/edgar/data/354950/000035495023000059/hd-20230129.htm,5. Proactive Stewardship
+20,Merck & Co.,MRK,"$323,822,419,968",2/24/2023,12/31/2022,https://www.sec.gov/Archives/edgar/data/310158/000162828023005061/mrk-20221231.htm,5. Proactive Stewardship
+21,Costco,COST,"$321,254,621,184",10/11/2023,9/3/2023,https://www.sec.gov/Archives/edgar/data/909832/000090983223000042/cost-20230903.htm,2. Victimized
+22,AbbVie,ABBV,"$313,365,692,416",2/17/2023,12/31/2022,https://www.sec.gov/Archives/edgar/data/1551152/000155115223000011/abbv-20221231.htm,2. Victimized
+23,Oracle Corporation,ORCL,"$305,982,275,584",6/20/2023,5/31/2023,https://www.sec.gov/Archives/edgar/data/1341439/000095017023028914/orcl-20230531.htm,2. Victimized
+24,Chevron Corporation,CVX,"$286,220,156,928",2/23/2023,12/31/2022,https://www.sec.gov/Archives/edgar/data/93410/000009341023000009/cvx-20221231.htm,2. Victimized
+25,Advanced Micro Devices,AMD,"$280,937,398,272",1/31/2024,12/30/2023,https://www.sec.gov/Archives/edgar/data/2488/000000248824000012/amd-20231230.htm,2. Victimized
+26,Salesforce,CRM,"$280,448,958,464",3/8/2023,1/31/2023,https://www.sec.gov/Archives/edgar/data/1108524/000110852423000011/crm-20230131.htm,2. Victimized
+27,Bank of America,BAC,"$269,156,220,928",2/22/2023,12/31/2022,https://www.sec.gov/Archives/edgar/data/70858/000007085823000092/bac-20221231.htm,2. Victimized
+28,Coca-Cola Company (The),KO,"$255,817,072,640",2/21/2023,12/31/2022,https://www.sec.gov/Archives/edgar/data/21344/000002134423000011/ko-20221231.htm,2. Victimized
+29,Netflix,NFLX,"$252,710,207,488",1/26/2024,12/31/2023,https://www.sec.gov/Archives/edgar/data/1065280/000106528024000030/nflx-20231231.htm,1. Invisible
+30,Adobe Inc.,ADBE,"$247,090,315,264",1/17/2024,12/1/2023,https://www.sec.gov/Archives/edgar/data/796343/000079634324000006/adbe-20231201.htm,2. Victimized
+31,Accenture,ACN,"$231,661,010,944",10/12/2023,8/31/2023,https://www.sec.gov/Archives/edgar/data/1467373/000146737323000324/acn-20230831.htm,5. Proactive Stewardship
+32,PepsiCo,PEP,"$228,595,204,096",2/9/2024,12/30/2023,https://www.sec.gov/Archives/edgar/data/77476/000007747624000008/pep-20231230.htm,2. Victimized
+33,Thermo Fisher Scientific,TMO,"$211,670,040,576",2/23/2023,12/31/2022,https://www.sec.gov/Archives/edgar/data/97745/000009774523000008/tmo-20221231.htm,2. Victimized
+34,McDonald's,MCD,"$210,879,905,792",2/24/2023,12/31/2022,https://www.sec.gov/Archives/edgar/data/63908/000006390823000012/mcd-20221231.htm,4. Developing commitment
+35,Linde plc,LIN,"$209,293,066,240",2/28/2023,12/31/2022,https://www.sec.gov/Archives/edgar/data/1707925/000162828023005434/lin-20221231.htm,2. Victimized
+36,Walt Disney,DIS,"$204,707,872,768",1/24/2024,9/30/2023,https://www.sec.gov/ix?doc=/Archives/edgar/data/1744489/000174448923000216/dis-20230930.htm,4. Developing commitment
+37,Abbott,ABT,"$197,928,206,336",2/16/2024,12/31/2023,https://www.sec.gov/Archives/edgar/data/1800/000162828024005348/abt-20231231.htm,2. Victimized
+38,Cisco,CSCO,"$196,834,967,552",9/7/2023,7/29/2023,https://www.sec.gov/Archives/edgar/data/858877/000085887723000023/csco-20230729.htm,4. Developing commitment
+39,T-Mobile US,TMUS,"$190,385,815,552",2/2/2024,12/31/2023,https://www.sec.gov/Archives/edgar/data/1283699/000128369924000008/tmus-20231231.htm,5. Proactive Stewardship
+40,Wells Fargo,WFC,"$186,816,823,296",2/21/2023,12/31/2022,https://www.sec.gov/Archives/edgar/data/0000072971/000007297123000071/wfc-20221231.htm,1. Invisible
+41,Danaher Corporation,DHR,"$184,800,002,048",2/22/2023,12/31/2022,https://www.sec.gov/Archives/edgar/data/313616/000031361623000087/dhr-20221231.htm,3. Tokenistic
+42,Intel,INTC,"$183,960,272,896",1/26/2024,12/30/2023,https://www.sec.gov/Archives/edgar/data/50863/000005086324000010/intc-20231230.htm,5. Proactive Stewardship
+43,Intuit,INTU,"$183,565,221,888",9/1/2023,7/31/2023,https://www.sec.gov/Archives/edgar/data/896878/000089687823000034/intu-20230731.htm,2. Victimized
+44,IBM,IBM,"$171,337,646,080",2/28/2023,12/31/2022,https://www.sec.gov/Archives/edgar/data/51143/000155837023002376/ibm-20221231x10k.htm,2. Victimized
+45,Qualcomm,QCOM,"$170,402,037,760",11/1/2023,9/24/2023,https://www.sec.gov/Archives/edgar/data/804328/000080432823000055/qcom-20230924.htm,5. Proactive Stewardship
+46,Verizon,VZ,"$170,230,906,880",2/9/2024,12/31/2023,https://www.sec.gov/Archives/edgar/data/732712/000073271224000010/vz-20231231.htm,2. Victimized
+47,Applied Materials,AMAT,"$166,054,625,280",12/15/2023,10/29/2023,https://www.sec.gov/Archives/edgar/data/6951/000000695123000041/amat-20231029.htm,2. Victimized
+48,Comcast,CMCSA,"$163,799,515,136",1/31/2024,12/31/2023,https://www.sec.gov/Archives/edgar/data/1166691/000116669124000011/cmcsa-20231231.htm,1. Invisible
+49,Uber,UBER,"$162,818,375,680",2/15/2024,12/31/2023,https://www.sec.gov/Archives/edgar/data/1543151/000154315124000012/uber-20231231.htm,2. Victimized
+50,General Electric,GE,"$162,335,309,824",2/2/2024,12/31/2023,https://www.sec.gov/Archives/edgar/data/40545/000004054524000027/ge-20231231.htm,3. Tokenistic
