@@ -21,7 +21,6 @@
         <main>
             <hr>
 
-            <!-- Abstract -->
             <h2> Abstract </h2>
 
             <p>
@@ -29,15 +28,13 @@
                 focusing on SEC 10-K filings from leading S&P 50 companies. These filings offer detailed insights into
                 financial performance, risks, and management discussions, providing a rich dataset for analyzing
                 corporate behaviors with sustainability and environmental concerns.
-                <!-- </p>
-            <p> -->
+
                 Through meticulous examination of these legally binding financial disclosures, this study sheds light on
                 the extent to which companies address environmental issues and the implications for environmental
                 stewardship. Drawing inspiration
                 from established greenwashing indicator frameworks, the study develops a climate sentiment framework
                 tailored to the context of SEC 10-K filings.
-                <!-- </p>
-            <p> -->
+
                 By contributing to the broader discourse on environmental challenges, stewardship, and corporate
                 transparency, this research offers valuable insights for
                 academia, industry stakeholders, and policymakers grappling with environmental issues in the corporate
@@ -48,8 +45,6 @@
 
             <hr>
 
-
-            <!-- Overview -->
             <h2> Context </h2>
 
             <p> As concerns regarding corporate sustainability and environmental responsibility continue to mount, the
@@ -73,9 +68,6 @@
 
             <hr>
 
-
-
-            <!-- Glossary -->
             <h2> Glossary </h2>
 
             <table class="term">
@@ -100,12 +92,7 @@
                     <td>Section 1A of a company's 10-K filing, which outlines the key risks and uncertainties facing the
                         company, including financial, market, regulatory, and operational risks.</td>
                 </tr>
-                <!-- <tr>
-                    <td>Bi-gram</td>
-                    <td>In text analysis, a bi-gram refers to a sequence of two adjacent words or tokens occurring in a
-                        document or a corpus. Bi-grams are commonly used in natural language processing tasks such as
-                        language modeling and sentiment analysis.</td>
-                </tr> -->
+
                 <tr>
                     <td>EDGAR</td>
                     <td>The Electronic Data Gathering, Analysis, and Retrieval system (EDGAR) is an online database
@@ -136,12 +123,7 @@
                         company's outstanding shares of stock. It is calculated by multiplying the current share price
                         by the total number of outstanding shares.</td>
                 </tr>
-                <!-- <tr>
-                    <td>S&P</td>
-                    <td>Standard & Poor's (S&P) is a financial services company that provides credit ratings, market
-                        intelligence, and investment research. It is best known for its stock market indices, including
-                        the S&P 500, which tracks the performance of 500 large-cap U.S. companies.</td>
-                </tr> -->
+
                 <tr>
                     <td>S&P 500</td>
                     <td>The S&P 500 is a stock market index that measures the performance of 500 large-cap U.S.
@@ -154,20 +136,13 @@
                         federal securities laws, regulating the securities industry, and overseeing the stock and
                         options exchanges in the United States.</td>
                 </tr>
-                <!-- <tr>
-                    <td>Text analysis</td>
-                    <td>Text analysis, also known as text mining or text analytics, is the process of extracting
-                        meaningful insights and information from unstructured text data. It involves techniques such as
-                        natural language processing, machine learning, and statistical analysis to analyze and interpret
-                        large volumes of text.</td>
-                </tr> -->
+
             </table>
 
 
             <hr>
 
 
-            <!-- methodology -->
             <h2> Approach </h2>
 
             <ol>
@@ -183,18 +158,17 @@
                         href="https://pypi.org/project/sec-api/#10-k10-q8-k-section-extractor-api"> SEC 10-K Section
                         Extractor API</a>.
                 </li>
-                <!-- <li>
-              Crossed-referenced extracted text with key climate-change bi-grams from this research: <a href="https://onlinelibrary.wiley.com/doi/10.1111/jofi.13219"> Firm-Level Climate Change Exposure</a> by Sautner, Van Lent, and Grigor (2023).
-            </li> -->
                 <li>
                     Analyzed the extent of climate change-related information present within the specified sections of
                     the SEC 10-K filings of S&P 50 companies.
                 </li>
 
-                <li>
-                    Utilized common Greenwashing Indicator heuristics to develop a tiered system for evaluating climate
-                    change sentiment demonstrated in SEC 10-K filings.
-                </li>
+                <li>Created a climate sentiment framework by leveraging common Greenwashing Indicator heuristics to
+                    evaluate climate sentiment demonstrated by S&P 50 companies in SEC 10-K filings.</li>
+
+                <li>Classified S&P 50 companies into five distinct levels based on their acknowledgment of climate
+                    change as a business risk and their commitment to climate action within these filings. Performed a
+                    meta-analysis to gain further insights.</li>
 
             </ol>
 
@@ -202,8 +176,6 @@
 
             <hr>
 
-
-            <!-- Key Findings -->
             <h2> Key Findings </h2>
 
             <b>
@@ -228,7 +200,6 @@
             <h2> Detailed summary </h2>
 
 
-            <!-- What is SEC 10-K  -->
             <h3> Quick introduction to SEC 10-K filing </h3>
             <p>SEC 10-K filings are comprehensive annual reports submitted by publicly traded companies to the U.S.
                 Securities and Exchange Commission (SEC). These filings provide detailed insights into a company's
@@ -237,7 +208,8 @@
                 data sources for analyzing how companies address climate-related issues in their business operations and
                 risk management strategies.</p>
 
-            <p>For the purpose of this analysis, we will focus on the first two parts of the 10-K:</p>
+            <p>For the purpose of this analysis, we will focus on the first two parts of the 10-K (highlighted in the
+                yellow box):</p>
             <ul>
                 <li><strong>Section 1 (Business):</strong> This section provides crucial insights into a company's
                     business operations, including their products or services, market position, and competitive
@@ -249,30 +221,25 @@
                     filings.</li>
             </ul>
 
+            <figure class="table-figure">
 
-            <img src="./media/SEC_10-K_table_of_content.png" width="600">
-            <!-- <p> Coming soon
-                    </p> -->
+                <img src="./media/SEC_10-K_table_of_content.png" width="600" alt="Table of Contents">
+                <figcaption> Figure 1. Example of SEC 10-K filing's Table of Contents</figcaption>
+            </figure>
 
             <hr>
 
 
-
-
-            <!-- Examples of ESG mentions -->
             <h3> A framework with five types of climate sentiments in SEC 10-K Filings </h3>
 
             <br>
-            <p> A framework consisting of five types of climate sentiments found within SEC
-                10-K filings was constructed by referencing key indicators of greenwashing and examples
-                of best practices in corporate reporting. Efforts were made to apply these concepts specifically to the
-                business and risk sections of the 10-K filing, ensuring relevance and applicability.
-
-                This framework draws inspiration from the Greenwashing Assessment Tool provided in the Issue Brief
-                titled
-                "Why addressing greenwashing remains as important as ever (and what can be done about it)" by Wren
-                Montgomery, Tom Lyon, Julian Barg, and Matthew Lynch, published by the Ivey Centre for Building
-                Sustainable Value & Erb Institute.
+            <p> A framework comprising five types of climate sentiments identified within SEC 10-K filings was developed
+                by referring to key indicators of greenwashing and exemplars of best practices in corporate reporting.
+                Special attention was given to applying these concepts specifically to the business and risk sections of
+                the 10-K filings, ensuring relevance and practicality. This framework draws inspiration from the
+                Greenwashing Assessment Tool outlined in the Issue Brief titled "Why addressing greenwashing remains as
+                important as ever (and what can be done about it)" by Wren Montgomery, Tom Lyon, Julian Barg, and
+                Matthew Lynch, published by the Ivey Centre for Building Sustainable Value & Erb Institute.
             </p>
 
             <br>
@@ -341,7 +308,6 @@
 
 
             <hr>
-            <h3> More details and examples on each sentiment level: </h3>
 
             <h4> Sentiment Level #1: Invisible </h4>
             <h5> Overview: A complete lack of acknowledgment </h5>
@@ -435,7 +401,6 @@
             <p> <b>Example snippets: </b></p>
             <p> Visa: </p>
             <img src="./media/VISA.png" width="400">
-            <!-- <img src="./media/MSFT.png" width="400" >  -->
 
             <hr>
             <h4> Sentiment Level #4: Developing commitment </h4>
@@ -510,63 +475,57 @@
 
             <h2> Conclusions </h2>
 
-            <p> The investigation into corporate climate sentiment within SEC 10-K filings from the top 50 S&P companies
-                has provided an understanding of how leading corporations address climate-related issues.
-                Companies into categorized into five distinct levels within a climate sentiment framework based on their acknowledgment
-                of climate change as a business risk and their commitment to climate action within these filings.
+            <p> This research has provided a view into of how leading S&P 50 companies address climate-related
+                issues within their SEC 10-K filings. A climate sentiment framework has been created, categorizing
+                companies into five distinct levels based on both their acknowledgment of climate change as a business
+                risk and their commitment to climate action within these filings.
             </p>
             <br>
             <p>
                 There are several avenues for further exploration and refinement of findings from this
-                project. One potential direction is the application of advanced text analysis and machine learning techniques to
-                scale the assessment to a broader set of companies beyond the S&P 50. By leveraging these tools, we may
-                enhance the efficiency and accuracy of our analysis, enabling us to gain insights into climate sentiment
-                across a more extensive range of corporations. Furthermore, exploring beyond the two sections highlighted in our study—Sections 1 (Business) and 1A
+                project. One potential direction is the application of advanced text analysis and machine learning
+                techniques to scale the assessment to a broader set of companies beyond the S&P 50. By leveraging these
+                tools, we may enhance the efficiency and accuracy of our analysis, enabling us to gain insights into
+                climate sentiment
+                across a more extensive range of corporations. Furthermore, exploring beyond the two sections
+                highlighted in our study—Sections 1 (Business) and 1A
                 (Risk)—to include other sections of the SEC 10-K filings could provide a more comprehensive
                 understanding of how companies integrate climate-related considerations into their overall disclosure
-                practices. 
+                practices.
             </p>
             <br>
             <p>
                 In addition, a comparative analysis of information consistency between companies' sustainability reports
-                and their financial disclosures could also offer valuable insights into the alignment—or lack thereof—between
-                stated commitments and actual practices. By examining discrepancies and inconsistencies between these
+                and their financial disclosures could also offer valuable insights into the alignment—or lack
+                thereof—between stated commitments and actual practices. By examining discrepancies and inconsistencies
+                between these
                 documents, we can gain a deeper understanding of companies' transparency and accountability regarding
                 their climate-related efforts. This could inform efforts to enhance reporting standards and promote
                 greater transparency in corporate sustainability disclosures.
             </p>
             <br>
             <p>
-                While policy interventions and regulatory frameworks play a crucial role in
-                setting the stage for climate action, the market-driven nature of business environments means that
-                investor pressure and market incentives can be powerful drivers of change. By incorporating climate
+                While policy and regulatory interventions play a crucial role in setting the stage for
+                climate action, as demonstrated by the acknowledgment of climate as a business risk in the majority of
+                this cohort of companies' SEC 10-K filings, the profit-driven nature of the current market dynamic means
+                that
+                investor pressure and market incentives can also be powerful drivers of change. By incorporating climate
                 considerations into investment decision-making processes and applying pressure on companies to
                 prioritize climate action alongside profit, investors can catalyze meaningful change.
             </p>
             <br>
             <p>
-                In conclusion, our research contributes to the growing body of knowledge on corporate climate sentiment
+                In conclusion, this research contributes to the growing body of knowledge on corporate climate sentiment
                 and underscores the importance of integrating climate considerations into corporate strategies and
                 financial disclosures. By developing a nuanced understanding of how leading corporations address
-                climate-related issues in their SEC 10K filings, we can identify opportunities for improvement and advocate for greater
+                climate-related issues in their SEC 10K filings, we can identify opportunities for improvement and
+                advocate for greater
                 transparency, accountability, and action on climate change. As we continue to refine our methodologies
                 and expand our analysis, we aim to empower stakeholders with the insights they need to drive meaningful
                 progress towards a more sustainable and resilient future.
             </p>
 
             <hr>
-
-            <!-- <h3> References </h3>
-
-            <p> Coming soon
-            </p>
-
-
-
-
-            <hr> -->
-
-
 
 
             <h3> Appendix </h3>
@@ -605,7 +564,6 @@
 
         </main>
     </div>
-    <script src="script.js"></script>
 
 
 </body>
